@@ -29,8 +29,8 @@ sudo docker run -d -p 8080:8080 -p 50000:50000 \
 
 sudo docker exec -it (jenkins docker image id) bash
 
-id jenkins
+docker ps
 
 4. Jenkins 초기 비밀번호 
 
-sudo docker logs jenkins-server
+docker logs jenkins-server
