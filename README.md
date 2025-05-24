@@ -3,7 +3,7 @@
 
 1. Docker , Docker compose 설치
 
-Script
+git clone https://github.com/Hanamo777/Jenkins.git
 
 sudo apt update && sudo apt upgrade
 
