@@ -33,6 +33,6 @@ timeout 300s bash -c 'until sudo docker logs jenkins-server 2>&1 | grep -q "Plea
 
 # 초기 관리자 비밀번호 출력
 echo "====== Jenkins 초기 관리자 비밀번호 ======"
-sudo docker logs jenkins-server 2>&1 | grep -A 2 "Please use the following password"
+sudo docker logs jenkins-server 2>&1 | grep -A 5 "Please use the following password"
 
 echo "Jenkins 초기 설정 완료 준비됨. 웹 브라우저에서 접속하세요: http://[당신의_EC2_인스턴스_IP]:8080"
