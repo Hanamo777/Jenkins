@@ -17,12 +17,13 @@ chmod 711 dockerSetter.sh
 
 sudo docker build -t my-jenkins:latest .
 
+```
 sudo docker run -d -p 8080:8080 -p 50000:50000 \
 -v jenkins_home:/var/jenkins_home \
 -v /var/run/docker.sock:/var/run/docker.sock \
 --group-add $(getent group docker | cut -d: -f3) \
 --name jenkins-server my-jenkins:lates
-
+```
 
 3. Jenkins Docker 컨테이너가 Host Docker socket 권한 연동됬느지 확인하는 법
 
