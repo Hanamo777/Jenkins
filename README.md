@@ -6,8 +6,11 @@
 Script
 
 sudo apt update && sudo apt upgrade
+
 curl -fsSL https://get.docker.com -o dockerSetter.sh
+
 chmod 711 dockerSetter.sh
+
 ./dockerSetter.sh
 
 2. Dockerfile jenkins 실행
