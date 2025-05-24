@@ -57,20 +57,20 @@ RUN echo "=== Docker CLI 설치 시작 ===" && \
     docker --version
 
 # 인증서 디렉토리 설정 로깅
-RUN echo "=== 인증서 디렉토리 설정 ===" && \
-    mkdir -p /var/jenkins_home/certs && \
-    chown jenkins:jenkins /var/jenkins_home/certs && \
-    echo "인증서 디렉토리 권한:" && \
-    ls -la /var/jenkins_home/certs
+# RUN echo "=== 인증서 디렉토리 설정 ===" && \
+#    mkdir -p /var/jenkins_home/certs && \
+#    chown jenkins:jenkins /var/jenkins_home/certs && \
+#    echo "인증서 디렉토리 권한:" && \
+#    ls -la /var/jenkins_home/certs
 
 # 인증서 파일 복사 및 권한 설정 로깅
-COPY fullchain.pem /var/jenkins_home/certs/fullchain.pem
-COPY privkey.pem /var/jenkins_home/certs/privkey.pem
+# COPY fullchain.pem /var/jenkins_home/certs/fullchain.pem
+# COPY privkey.pem /var/jenkins_home/certs/privkey.pem
 
-RUN echo "=== 인증서 파일 권한 설정 ===" && \
-    chown jenkins:jenkins /var/jenkins_home/certs/fullchain.pem /var/jenkins_home/certs/privkey.pem && \
-    echo "인증서 파일 권한:" && \
-    ls -la /var/jenkins_home/certs/
+# RUN echo "=== 인증서 파일 권한 설정 ===" && \
+#    chown jenkins:jenkins /var/jenkins_home/certs/fullchain.pem /var/jenkins_home/certs/privkey.pem && \
+#    echo "인증서 파일 권한:" && \
+#    ls -la /var/jenkins_home/certs/
 
 # Docker 그룹 설정 로깅
 RUN echo "=== Docker 그룹 설정 ===" && \

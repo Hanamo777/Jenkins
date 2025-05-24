@@ -14,3 +14,12 @@ chmod 711 dockerSetter.sh
 ./dockerSetter.sh
 
 2. Dockerfile jenkins 실행
+
+sudo docker build -t my-jenkins:latest .
+
+sudo docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins-server my-jenkins:latest
+
+
+3. Jenkins 초기 비밀번호 
+
+sudo docker logs jenkins-server
